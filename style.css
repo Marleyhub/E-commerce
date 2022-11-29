@@ -25,9 +25,9 @@ html body{
 }
 .nav ul{
     position: absolute;
-    margin-left: 80vw;
+    text-align: end;
     height:5vh ;
-    width:30vw;
+    width:100vw;
     padding: 1vh;
     border-left: 1px solid white;
 }

@@ -16,7 +16,6 @@ html body{
     display: flex;
     font-size: 1.1em ;
 }
-
 .nav{
     height: 5hv;
     width: 100vw;
@@ -44,7 +43,6 @@ html body{
 .nav a:hover {
     background-color: rgb(255, 255, 255, 0.3);
 }
-
 .main-header-nav ul{
     margin: 0px;
     display: flex;
@@ -55,7 +53,6 @@ html body{
     padding:0px;    
     height: 100vh;
     width: 100vw;
- 
 }
 .home-button{
     position: absolute;
@@ -65,40 +62,58 @@ html body{
     border-radius: 40px;
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
-
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    min-width: 100vw;
 }
 .main-content-title {
-    padding: 2vh;
-    text-align: center;
     width: 30vw;
     color: black;
     border-bottom: 1px solid black;
-}
-.main-content{
-display: flex;
-justify-content: center;
+    display:flex;
+    justify-content: center;
 }
 .main-footer{
-background-color: rgba(0, 1, 23, 0.757);
-
+display: flex;
+flex-direction: row;
 }
 .main-footer img{
     height: 5vh;
     width: 5vh;
 }
 .main-footer-img{
-    margin-left: 83vw;
+    position: absolute;
+    text-align: end;
+    height:5vh ;
+    width:100vw;   
+    padding-top: 2vh;
 }
 .main-footer-conteiner {
     display: flex;
     align-items: center;
+    background-color: rgba(0, 1, 23, 0.757);
+    min-width: 100vw;
 }
 .main-footer-title{
     font-size: 0.8em;
     padding: 1em;
 }
 .card-conteiner{
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
+   min-height: 80vh;
+   min-width: 100vw;
+   background-color: black;
+   padding: 2em;
+   display: flex;
+   justify-content: center;
+}
+.card{
+height: 60vh;
+width: 20vw;
+background-color: rgb(255, 255, 255);
+border-radius: 20px;
+color: black;
 }

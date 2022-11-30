@@ -67,7 +67,7 @@ html body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 80vh;
+    min-height: 82vh;
     min-width: 100vw;
 }
 .main-content-title {
@@ -80,6 +80,7 @@ html body{
 .main-footer{
 display: flex;
 flex-direction: row;
+max-height: 8vh;
 }
 .main-footer img{
     height: 5vh;
@@ -103,7 +104,7 @@ flex-direction: row;
     padding: 1em;
 }
 .card-conteiner{
-   min-height: 80vh;
+   min-height: 71vh;
    min-width: 100vw;
    background-color: black;
    padding: 2em;
@@ -111,9 +112,38 @@ flex-direction: row;
    justify-content: center;
 }
 .card{
-height: 60vh;
-width: 20vw;
-background-color: rgb(255, 255, 255);
-border-radius: 20px;
-color: black;
+    height: 60vh;
+    width: 20vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: black;
+}
+.store-conteiner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-1 img {
+    height: 50vh;
+    width: 32vh;
+    border-radius: 5px;
+}
+.card-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+.item-price{
+    color: black;
+}
+.item-shop-button{
+    height: 4vh;
+    width: 5vw;
+    border-radius: 1em;
+}
+.card-title{
+    color:black;
+    text-align: center;
 }

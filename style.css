@@ -149,7 +149,7 @@ max-height: 8vh;
 }
 .content-section{
    height: 30vh;
-   width: 70vw;
+   min-width: 100vw;
 }
 .item-quantity,
 .item-price{
@@ -160,14 +160,12 @@ max-height: 8vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
 }
 .item-title-header,
 .item-price-header,
 .item-quantity-header{
     color: black;
     padding: 5vh;
-    border-top: 1px solid black;
 }
 .shopping-cart-row{
     display: flex;
@@ -201,13 +199,17 @@ max-height: 8vh;
     max-width: 2vh;
     max-height: 2vh;
 }
-.remove-title{
-    display: none;
-}
 .cart-remove-button{
     width: 8vh;
     height: 8vh;
 }
 .remove-button{
     min-width: 5vw;
+    min-height: 4vh;
+    color: black;  
+}
+.remove-title{
+    color: rgb(255, 255, 255);
+    border-bottom: rgb(255, 255, 255);
+
 }

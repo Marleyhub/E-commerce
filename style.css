@@ -175,5 +175,24 @@ max-height: 8vh;
     align-items: center;
 }
 .shopping-cart-row input{
-margin-left: 10px;
+    margin-left: 10px;
+}
+.shopping-cart-conteiner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cart-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vh;
+}
+.cart-title{
+    width: 20vh;
+    color: black;
+    border-bottom: 1px solid black;
+    text-align: center;
 }

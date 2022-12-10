@@ -149,7 +149,7 @@ max-height: 8vh;
 }
 .content-section{
    height: 30vh;
-   width: 70vh;
+   width: 70vw;
 }
 .item-quantity,
 .item-price{
@@ -188,11 +188,26 @@ max-height: 8vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 3vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 .cart-title{
     width: 20vh;
     color: black;
     border-bottom: 1px solid black;
     text-align: center;
+}
+.cart-img{
+    max-width: 2vh;
+    max-height: 2vh;
+}
+.remove-title{
+    display: none;
+}
+.cart-remove-button{
+    width: 8vh;
+    height: 8vh;
+}
+.remove-button{
+    min-width: 5vw;
 }

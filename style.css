@@ -147,3 +147,33 @@ max-height: 8vh;
     color:black;
     text-align: center;
 }
+.content-section{
+   height: 30vh;
+   width: 70vh;
+}
+.item-quantity,
+.item-price{
+    max-width: 4vh;
+    max-height: 4vh;
+}
+.shopping-cart-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.item-title-header,
+.item-price-header,
+.item-quantity-header{
+    color: black;
+    padding: 5vh;
+    border-top: 1px solid black;
+}
+.shopping-cart-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopping-cart-row input{
+margin-left: 10px;
+}

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@500&display=swap');
 
 *{
     box-sizing: border-box;
     color: rgb(255, 255, 255);
-    font-family: Raleway;
+    font-family: Playfair;
 }
 html body{
     padding:0px;
@@ -78,9 +78,9 @@ html body{
     justify-content: center;
 }
 .main-footer{
-display: flex;
-flex-direction: row;
-max-height: 8vh;
+    display: flex;
+    flex-direction: row;
+    max-height: 8vh;
 }
 .main-footer img{
     height: 5vh;
@@ -143,29 +143,28 @@ max-height: 8vh;
     width: 5vw;
     border-radius: 1em;
 }
-.card-title{
-    color:black;
-    text-align: center;
-}
 .content-section{
    height: 30vh;
    min-width: 100vw;
+}
+.cart-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .item-quantity,
 .item-price{
     max-width: 4vh;
     max-height: 4vh;
 }
-.shopping-cart-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .item-title-header,
 .item-price-header,
-.item-quantity-header{
+.item-quantity-header
+{
     color: black;
-    padding: 5vh;
+}
+.remove-cart-header{
+    color: rgb(255, 255, 255);
 }
 .shopping-cart-row{
     display: flex;
@@ -199,17 +198,12 @@ max-height: 8vh;
     max-width: 2vh;
     max-height: 2vh;
 }
-.cart-remove-button{
-    width: 8vh;
-    height: 8vh;
-}
 .remove-button{
     min-width: 5vw;
     min-height: 4vh;
     color: black;  
 }
-.remove-title{
+.remove-title-header{
     color: rgb(255, 255, 255);
-    border-bottom: rgb(255, 255, 255);
-
+    border-bottom: rgb(255, 255, 255);   
 }

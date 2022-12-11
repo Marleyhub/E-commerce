@@ -198,7 +198,7 @@ html body{
     max-width: 2vh;
     max-height: 2vh;
 }
-.remove-button{
+.item-remove-button{
     min-width: 5vw;
     min-height: 4vh;
     color: black;  

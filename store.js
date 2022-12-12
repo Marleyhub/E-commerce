@@ -2,7 +2,6 @@
 // Botão remover
 
 var cartRemoveButton = document.getElementsByClassName('item-remove-button')
-console.log(cartRemoveButton)
 for(var i = 0; i < cartRemoveButton.length; i++) {
     var button = cartRemoveButton[i]
     button.addEventListener('click', function(event){
@@ -16,8 +15,14 @@ for(var i = 0; i < cartRemoveButton.length; i++) {
 // Botão commprar 
 
 var shopButton = document.getElementsByClassName('item-shop-button')
-console.log(shopButton)
 for(i = 0; i < shopButton.length; i++){
     var button = shopButton[i]
-    button.addEventListener('click', shopbuttonclicked)
+    var buttonClicked = button.addEventListener('click', shopButtonClicked)
 }
+    function shopButtonClicked(event){
+        var button = event.target   
+        var shopItem = button.parentElement.parentElement
+        var price = document.getElementsByClassName('item-price')
+        console.log(shopItem)
+    }
+

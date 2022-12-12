@@ -22,7 +22,9 @@ for(i = 0; i < shopButton.length; i++){
     function shopButtonClicked(event){
         var button = event.target   
         var shopItem = button.parentElement.parentElement
-        var price = document.getElementsByClassName('item-price')
-        console.log(shopItem)
+        var itemPrice = document.getElementsByClassName('item-price')[0].innerHTML
+        var itemImg = document.getElementsByClassName('card-item-img')[0].src
+        console.log(itemPrice, itemImg)
+
     }
 

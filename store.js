@@ -6,7 +6,7 @@ for(var i = 0; i < cartRemoveButton.length; i++) {
     var button = cartRemoveButton[i]
     button.addEventListener('click', function(event){
         var buttonClicked = event.target
-        console.log(buttonClicked)
+        console.log('clicked')
         buttonClicked.parentElement.parentElement.remove()
     })
 }
@@ -27,4 +27,13 @@ for(i = 0; i < shopButton.length; i++){
         console.log(itemPrice, itemImg)
 
     }
-
+     
+ // Update do valor total 
+  var cartConteiner = document.getElementsbyClassName('shopping-cart-content')[0]
+  var cartRows = document.getElementsByClassName('cart-row')
+  for (i = 0; i < cartRow.length; i++){
+      var cartRow = cartRows.getElementsByClassName('cart-row')[0]
+      var itemPrice = cartRow.getElementsByClassName('item-price')
+      console.log(cartRow, itemPrice)
+  }
+  

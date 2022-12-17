@@ -8,16 +8,30 @@ for(var i = 0; i < cartRemoveButton.length; i++) {
         var buttonClicked = event.target
         console.log('remove-clicked')
         buttonClicked.parentElement.parentElement.remove()
+        updateCartTotal()
     })
+}
+        
+// Update do valor total 
+
+function updateCartTotal(){
+    var cartConteiner = document.getElementsByClassName('shopping-cart-conteiner')
+    var cartRows = document.getElementsByClassName('cart-row')
+    for (i = 0; i < cartRows.length; i++){
+        var cartRow = cartRows[i]
+        var itemPrice = cartRow.getElementsByClassName('item-price')[0]
+        var itemQuantity = cartRow.getElementsByClassName('item-quantity')[0]
+        console.log(itemQuantity, itemPrice)
+    }
 }
 
 // Botão commprar 
 
-var shopButton = document.getElementsByClassName('item-shop-button')
-for(i = 0; i < shopButton.length; i++){
-    var button = shopButton[i]
-    var buttonClicked = button.addEventListener('click', shopButtonClicked)
-}
+    var shopButton = document.getElementsByClassName('item-shop-button')
+    for(i = 0; i < shopButton.length; i++){
+        var button = shopButton[i]
+        var buttonClicked = button.addEventListener('click', shopButtonClicked)
+    }
     function shopButtonClicked(event){
         var button = event.target   
         var shopItem = button.parentElement.parentElement
@@ -28,13 +42,4 @@ for(i = 0; i < shopButton.length; i++){
 
     }
      
- // Update do valor total 
- //var cartConteiner = document.getElementsbyClassName('shopping-cart-conteiner')[0]  
- var cartRows = document.getElementsByClassName('cart-row')
-  for (i = 0; i < cartRows.length; i++){
-      var cartRow = cartRows[i]
-      var itemPrice = cartRow.getElementsByClassName('item-price')[0]
-      var itemQuantity = cartRow.getElementsByClassName('item-quantity')[0]
-      console.log(itemQuantity, itemPrice)
-  }
-  
+ 

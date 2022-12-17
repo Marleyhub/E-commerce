@@ -120,6 +120,7 @@ html body{
 }
 .store-conteiner{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
@@ -161,52 +162,37 @@ html body{
     max-width: 4vh;
     max-height: 4vh;
 }
-.item-title-header,
-.item-price-header,
-.item-quantity-header
-{
-    color: black;
+.shopping-cart{
+    min-width: 50vw;
 }
-.remove-cart-header{
-    color: rgb(255, 255, 255);
-}
-.shopping-cart-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.shopping-cart-row input{
-    margin-left: 10px;
-}
-.shopping-cart-conteiner{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.cart-column{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-.cart-title{
-    width: 20vh;
+.cart-row-title h3{
     color: black;
     border-bottom: 1px solid black;
+    min-width: 18vh;
     text-align: center;
 }
-.cart-img{
+.cart-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-cart-row input{
+ max-width: 5vh;
+ max-height: 5vh;
+}
+
+.card-cart-img{
     max-width: 2vh;
     max-height: 2vh;
 }
 
-.item-remove-button{
+.cart-remove-button{
+    position: absolute;
     min-width: 7vw;
     min-height: 5vh;
     color: black;  
     background-color: rgb(199, 0, 0);
     border-radius:5em;
+    margin-left: 60vw;
 }

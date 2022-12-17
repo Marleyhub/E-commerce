@@ -34,6 +34,6 @@ for(i = 0; i < shopButton.length; i++){
   for (i = 0; i < cartRow.length; i++){
       var cartRow = cartRows.getElementsByClassName('cart-row')[0]
       var itemPrice = cartRow.getElementsByClassName('item-price')
-      console.log(cartRow, itemPrice)
+      console.log(cartConteiner, itemPrice)
   }
   

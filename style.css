@@ -203,3 +203,11 @@ html body{
 .cart-item-quantity{
     color: black;
 }
+.cart-total{
+    padding: 5vh;
+    margin-left: 55vh;
+}
+
+.cart-total strong,span{
+   color: black;
+}

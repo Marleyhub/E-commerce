@@ -19,14 +19,17 @@ for(var i = 0; i < cartRemoveButton.length; i++) {
 function updateCartTotal(){
     var cartConteiner = document.getElementsByClassName('shopping-cart')[0]
     var cartRows = cartConteiner.getElementsByClassName('card-cart-row')
+    var total = 0 
     for (i = 0; i < cartRows.length; i++){
         var cartRow = cartRows[i]
         var itemPrice = cartRow.getElementsByClassName('cart-item-price')[0]
         var itemQuantity = cartRow.getElementsByClassName('cart-item-quantity')[0]
         var price = parseFloat(itemPrice.innerHTML.replace('$',''))
         var quantity = itemQuantity.value
-        console.log(price *  quantity)
+        total = total +(price * quantity )
+        console.log(total)
     }
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
   
 // Botão commprar 

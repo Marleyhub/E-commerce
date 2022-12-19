@@ -1,13 +1,13 @@
 
 // Botão remover
 
-var cartRemoveButton = document.getElementsByClassName('item-remove-button')
+var cartRemoveButton = document.getElementsByClassName('cart-remove-button')
 for(var i = 0; i < cartRemoveButton.length; i++) {
     var button = cartRemoveButton[i]
     button.addEventListener('click', function(event){
         var buttonClicked = event.target
         console.log('remove-clicked')
-        buttonClicked.parentElement.parentElement.remove()
+        buttonClicked.parentElement.remove()
         updateCartTotal()
     })
 }

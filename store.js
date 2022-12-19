@@ -6,25 +6,29 @@ for(var i = 0; i < cartRemoveButton.length; i++) {
     var button = cartRemoveButton[i]
     button.addEventListener('click', function(event){
         var buttonClicked = event.target
-        console.log('remove-clicked')
         buttonClicked.parentElement.remove()
         updateCartTotal()
     })
 }
-        
+
 // Update do valor total 
+  /* após a função remover ser acionada mandamos o função de callback de update
+     do valor total rodar, fazendo um loop na variael carRows(HTML colection [.lenght])
+     fazendo os calculos necessários ' */
 
 function updateCartTotal(){
-    var cartConteiner = document.getElementsByClassName('shopping-cart-conteiner')
-    var cartRows = document.getElementsByClassName('cart-row')
+    var cartConteiner = document.getElementsByClassName('shopping-cart')[0]
+    var cartRows = cartConteiner.getElementsByClassName('card-cart-row')
     for (i = 0; i < cartRows.length; i++){
         var cartRow = cartRows[i]
-        var itemPrice = cartRow.getElementsByClassName('item-price')[0]
-        var itemQuantity = cartRow.getElementsByClassName('item-quantity')[0]
-        console.log(itemQuantity, itemPrice)
+        var itemPrice = cartRow.getElementsByClassName('cart-item-price')[0]
+        var itemQuantity = cartRow.getElementsByClassName('cart-item-quantity')[0]
+        var price = parseFloat(itemPrice.innerHTML.replace('$',''))
+        var quantity = itemQuantity.value
+        console.log(price *  quantity)
     }
 }
-
+  
 // Botão commprar 
 
     var shopButton = document.getElementsByClassName('item-shop-button')

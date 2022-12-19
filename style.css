@@ -161,6 +161,9 @@ html body{
 .item-price{
     max-width: 4vh;
     max-height: 4vh;
+
+
+
 }
 .shopping-cart{
     min-width: 50vw;
@@ -183,8 +186,8 @@ html body{
 }
 
 .card-cart-img{
-    max-width: 2vh;
-    max-height: 2vh;
+    max-width: 5vh;
+    max-height: 7vh;
 }
 
 .cart-remove-button{
@@ -195,4 +198,8 @@ html body{
     background-color: rgb(199, 0, 0);
     border-radius:5em;
     margin-left: 60vw;
+}
+.cart-item-price,
+.cart-item-quantity{
+    color: black;
 }

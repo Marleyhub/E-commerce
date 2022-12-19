@@ -1,16 +1,23 @@
 
-// Botão remover
-
-var cartRemoveButton = document.getElementsByClassName('cart-remove-button')
-for(var i = 0; i < cartRemoveButton.length; i++) {
-    var button = cartRemoveButton[i]
-    button.addEventListener('click', function(event){
-        var buttonClicked = event.target
-        buttonClicked.parentElement.remove()
-        updateCartTotal()
-    })
+if (document.readyState == 'loading'){
+    document.addEventListener('DOMContentLoaded', ready)
+}else{
+    ready()
 }
 
+function ready(){
+    var cartRemoveButton = document.getElementsByClassName('cart-remove-button')
+    for(var i = 0; i < cartRemoveButton.length; i++) {
+        var button = cartRemoveButton[i]
+        button.addEventListener('click', removeCartItems)
+    }
+}
+
+function removeCartItems(event){
+    var buttonClicked = event.target
+    buttonClicked.parentElement.remove()
+    updateCartTotal()
+}
 // Update do valor total 
   /* após a função remover ser acionada mandamos o função de callback de update
      do valor total rodar, fazendo um loop na variael carRows(HTML colection [.lenght])

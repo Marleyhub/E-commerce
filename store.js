@@ -58,19 +58,14 @@ function updateCartTotal(){
   
 // Botão commprar 
 
-    var shopButton = document.getElementsByClassName('item-shop-button')
-    for(i = 0; i < shopButton.length; i++){
-        var button = shopButton[i]
-        var buttonClicked = button.addEventListener('click', shopButtonClicked)
-    }
-    function shopButtonClicked(event){
-        var button = event.target   
-        var shopItem = button.parentElement.parentElement
-        var itemPrice = document.getElementsByClassName('item-price')[0].innerHTML
-        var itemImg = document.getElementsByClassName('card-item-img')[0].src
-        console.log(itemPrice, itemImg)
-        console.log('shop-clicked')
+var shopButtons = document.getElementsByClassName('item-shop-button') 
+for (i = 0; i < shopButtons.length; i++){
+    shopButton = shopButtons[i]
+    shopButton.addEventListener('click', addToCart)
+}
 
-    }
+function addToCart(event){
+    var cardConteiner = document.getElementsByClassName()
+}
      
  

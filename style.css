@@ -124,7 +124,7 @@ html body{
     justify-content: space-around;
     align-items: center;
 }
-.card-1 img {
+.card img {
     height: 50vh;
     width: 32vh;
     border-radius: 5px;
@@ -166,6 +166,7 @@ html body{
 
 }
 .shopping-cart{
+    padding: 3em;
     min-width: 50vw;
 }
 .cart-row-title h3{

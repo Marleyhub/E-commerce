@@ -67,7 +67,7 @@ for (i = 0; i < shopButtons.length; i++){
 function addToCart(event){
     addToCartClicked = event.target
     var card = addToCartClicked.parentElement.parentElement
-    var itemPrice = card.getElementsByClassName('item-price')
-    
-  
+    var itemPrice = card.getElementsByClassName('item-price')[0].innerHTML
+    var imgSrc = card.getElementsByClassName('card-item-img')[0].src
+    console.log(card, itemPrice, imgSrc)
 }

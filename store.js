@@ -65,7 +65,9 @@ for (i = 0; i < shopButtons.length; i++){
 }
 
 function addToCart(event){
-    var cardConteiner = document.getElementsByClassName()
+    addToCartClicked = event.target
+    var card = addToCartClicked.parentElement.parentElement
+    var itemPrice = card.getElementsByClassName('item-price')
+    
+  
 }
-     
- 

@@ -136,6 +136,7 @@ html body{
     align-items: center;
     justify-content: space-between;
     margin-top: 1em;
+    
 }
 .item-price{
     color: black;
@@ -147,6 +148,7 @@ html body{
     color: rgb(255, 255, 255);
     min-width: 8vw;
     background-color: rgb(1, 145, 30);
+   
 }
 .content-section{
    height: 30vh;
@@ -161,12 +163,10 @@ html body{
 .item-price{
     max-width: 4vh;
     max-height: 4vh;
-
-
-
 }
 .shopping-cart{
-    padding: 3em;
+    margin-top: 40px;
+    padding: 1em;
     min-width: 50vw;
 }
 .cart-row-title h3{

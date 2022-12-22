@@ -67,7 +67,15 @@ for (i = 0; i < shopButtons.length; i++){
 function addToCart(event){
     addToCartClicked = event.target
     var card = addToCartClicked.parentElement.parentElement
-    var itemPrice = card.getElementsByClassName('item-price')[0].innerHTML
+    var itemPrice = card.getElementsByClassName('item-price')[0].innerText
     var imgSrc = card.getElementsByClassName('card-item-img')[0].src
     console.log(card, itemPrice, imgSrc)
+    addRowToCart(itemPrice, imgSrc)
+}
+
+function addRowToCart(itemPrice, imgSrc){
+    var cartRow = document.createElement('div')
+    var shoppingCart = document.getElementsByClassName('shopping-cart')[0]
+    shoppingCart.append(cartRow)
+    cartRow.innerText = itemPrice
 }

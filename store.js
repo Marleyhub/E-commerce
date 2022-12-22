@@ -88,3 +88,4 @@ function addRowToCart(itemPrice, imgSrc){
         `
     cartRow.innerHTML = cartRowContent
 }
+console.log('teste')

@@ -17,7 +17,6 @@ function ready(){
 var quantityInputs = document.getElementsByClassName('cart-item-quantity')
 for( var i = 0; i < quantityInputs.length; i++){
     var input = quantityInputs[i]
-    console.log(input)
     input.addEventListener('change', quantityChanged)
 }
 
@@ -87,6 +86,6 @@ function addRowToCart(itemPrice, imgSrc){
             <button type="submit" class="cart-remove-button">Remove</button>
         </div>
         `
-        cartRow.innerHTML = cartRowContent      
-        console.log(cartRow)
+        cartRow.innerHTML = cartRowContent  
+        shownCartRow.append(cartRow)    
 }

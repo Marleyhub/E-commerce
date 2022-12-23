@@ -77,14 +77,14 @@ function addRowToCart(itemPrice, imgSrc){
     var cartRow = document.createElement('div')
     cartRow.classList.add('card-cart-row')
     cartRow.classList.add('cart-row')
-    var shoppingCart = document.getElementsByClassName('shopping-cart')[0]
-    shoppingCart.append(cartRow)
+    var shownCartRow = document.getElementsByClassName('cart-itens-div')[0]
+    shownCartRow.append(cartRow)
     cartRowContent =
         `
-        <img src="${imgSrc}" class="card-cart-img" alt="item.jpg">
+        <img src="./images/Products/card.png" class="card-cart-img" alt="item.jpg">
         <input type="number" class="cart-item-quantity" value="1">
-        <p class="cart-item-price">${itemPrice}</p>
+        <span class="cart-item-price">$91.51</span>
         <button type="submit" class="cart-remove-button">Remove</button>
         `
-    cartRow.innerHTML = cartRowContent
+        cartRow.innerHTML = cartRowContent
 }

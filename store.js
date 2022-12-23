@@ -75,8 +75,7 @@ function addToCart(event){
 
 function addRowToCart(itemPrice, imgSrc){
     var cartRow = document.createElement('div')
-    cartRow.classList.add('card-cart-row')
-    cartRow.classList.add('cart-row')
+    cartRow.classList.add('card-cart-row', 'cart-row')
     var shownCartRow = document.getElementsByClassName('cart-itens-div')[0]
     shownCartRow.append(cartRow)
     cartRowContent =

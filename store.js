@@ -74,9 +74,9 @@ function addToCart(event){
 
 function addRowToCart(itemPrice, imgSrc){
     var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-itens-div')
+    cartRow.classList.add('card-cart-row', 'cart-row')
     var shownCartRow = document.getElementsByClassName('cart-itens-div')[0]
-    shownCartRow.append(cartRow)
+    console.log(shownCartRow)
     cartImg = shownCartRow.getElementsByClassName('card-cart-img')
     for (var i = 0; i < cartImg.length; i++){
         if(cartImg[i].src == imgSrc){
@@ -86,13 +86,13 @@ function addRowToCart(itemPrice, imgSrc){
     }
     cartRowContent =
         `
-        <div class="card-cart-row cart-row">
             <img src="${imgSrc}" class="card-cart-img" alt="item.jpg">
             <input type="number" class="cart-item-quantity" value="1">
             <span class="cart-item-price">${itemPrice}</span>
             <button type="submit" class="cart-remove-button">Remove</button>
-        </div>
         `
         cartRow.innerHTML = cartRowContent  
-        shownCartRow.append(cartRow)    
+        shownCartRow.append(cartRow)
+        shownCartRow.getElementsByClassName('cart-remove-button')[0].addEventListener('click', removeCartItems)
+        shownCartRow.getElementsByClassName('cart-item-quantity')[0].addEventListener('change', quantityChanged)
 }

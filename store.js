@@ -77,6 +77,13 @@ function addRowToCart(itemPrice, imgSrc){
     cartRow.classList.add('cart-itens-div')
     var shownCartRow = document.getElementsByClassName('cart-itens-div')[0]
     shownCartRow.append(cartRow)
+    cartImg = shownCartRow.getElementsByClassName('card-cart-img')
+    for (var i = 0; i < cartImg.length; i++){
+        if(cartImg[i].src == imgSrc){
+            alert('Already in cart')
+            return
+        }
+    }
     cartRowContent =
         `
         <div class="card-cart-row cart-row">

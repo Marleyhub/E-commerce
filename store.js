@@ -15,7 +15,7 @@ function ready(){
 }
 
 var quantityInputs = document.getElementsByClassName('cart-item-quantity')
-for(i = 0; i < quantityInputs.length; i++){
+for( var i = 0; i < quantityInputs.length; i++){
     var input = quantityInputs[i]
     console.log(input)
     input.addEventListener('change', quantityChanged)
@@ -44,7 +44,7 @@ function updateCartTotal(){
     var cartConteiner = document.getElementsByClassName('shopping-cart')[0]
     var cartRows = cartConteiner.getElementsByClassName('card-cart-row')
     var total = 0 
-    for (i = 0; i < cartRows.length; i++){
+    for ( var i = 0; i < cartRows.length; i++){
         var cartRow = cartRows[i]
         var itemPrice = cartRow.getElementsByClassName('cart-item-price')[0]
         var itemQuantity = cartRow.getElementsByClassName('cart-item-quantity')[0]
@@ -59,7 +59,7 @@ function updateCartTotal(){
 // Botão commprar 
 
 var shopButtons = document.getElementsByClassName('item-shop-button') 
-for (i = 0; i < shopButtons.length; i++){
+for ( var i = 0; i < shopButtons.length; i++){
     shopButton = shopButtons[i]
     shopButton.addEventListener('click', addToCart)
 }
@@ -69,22 +69,24 @@ function addToCart(event){
     var card = addToCartClicked.parentElement.parentElement
     var itemPrice = card.getElementsByClassName('item-price')[0].innerText
     var imgSrc = card.getElementsByClassName('card-item-img')[0].src
-    console.log(card, itemPrice, imgSrc)
     addRowToCart(itemPrice, imgSrc)
+    updateCartTotal()
 }
 
 function addRowToCart(itemPrice, imgSrc){
     var cartRow = document.createElement('div')
-    cartRow.classList.add('card-cart-row', 'cart-row')
+    cartRow.classList.add('cart-itens-div')
     var shownCartRow = document.getElementsByClassName('cart-itens-div')[0]
     shownCartRow.append(cartRow)
     cartRowContent =
         `
-        <img src="./images/Products/card.png" class="card-cart-img" alt="item.jpg">
-        <input type="number" class="cart-item-quantity" value="1">
-        <span class="cart-item-price">$91.51</span>
-        <button type="submit" class="cart-remove-button">Remove</button>
+        <div class="card-cart-row cart-row">
+            <img src="${imgSrc}" class="card-cart-img" alt="item.jpg">
+            <input type="number" class="cart-item-quantity" value="1">
+            <span class="cart-item-price">${itemPrice}</span>
+            <button type="submit" class="cart-remove-button">Remove</button>
+        </div>
         `
-        cartRow.innerHTML = cartRowContent
+        cartRow.innerHTML = cartRowContent      
         console.log(cartRow)
 }

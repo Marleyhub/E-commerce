@@ -180,6 +180,7 @@ html body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 1vh;
 }
 .card-cart-row input{
  max-width: 5vh;

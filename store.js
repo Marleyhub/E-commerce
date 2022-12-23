@@ -86,4 +86,5 @@ function addRowToCart(itemPrice, imgSrc){
         <button type="submit" class="cart-remove-button">Remove</button>
         `
         cartRow.innerHTML = cartRowContent
+        console.log(cartRow)
 }
